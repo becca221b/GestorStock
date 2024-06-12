@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Business;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GestorStock.WebApp.Controllers
 {
