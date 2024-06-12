@@ -2754,11 +2754,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\REBECAO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\REBECAO\\AppData\\Roaming\\NuGet\\NuGet.Config",

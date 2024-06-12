@@ -1,9 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\Proyecto Gestion de Stock\\GestionStock\\",
+  "WorkspaceRootPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\GestorStock\\GestionStock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F15951FF-12C7-40C5-89ED-0E14151DCFF2}|..\\DataEF\\DataEF.csproj|c:\\users\\rebecao\\desktop\\rebeca\\programaci\u00F3n iii\\tp integrador\\proyecto gestion de stock\\dataef\\stockdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B92EECD-F5E6-47AB-9D99-8F085C055FEE}|..\\Entities\\Entities.csproj|c:\\users\\rebecao\\desktop\\rebeca\\programaci\u00F3n iii\\tp integrador\\gestorstock\\entities\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\StockDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,7 +16,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -24,13 +27,30 @@
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Compra.cs",
+              "DocumentMoniker": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\GestorStock\\Entities\\Compra.cs",
+              "RelativeDocumentMoniker": "..\\Entities\\Compra.cs",
+              "ToolTip": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\GestorStock\\Entities\\Compra.cs",
+              "RelativeToolTip": "..\\Entities\\Compra.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T17:40:34.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "StockDbContext.cs",
               "DocumentMoniker": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\StockDbContext.cs",
-              "RelativeDocumentMoniker": "..\\DataEF\\StockDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\Proyecto Gestion de Stock\\DataEF\\StockDbContext.cs",
               "ToolTip": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programaci\u00F3n III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\StockDbContext.cs",
-              "RelativeToolTip": "..\\DataEF\\StockDbContext.cs",
+              "RelativeToolTip": "..\\..\\Proyecto Gestion de Stock\\DataEF\\StockDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAgwA0AAABqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T22:35:05.612Z",

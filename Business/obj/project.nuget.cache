@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "knAbOesAGMLPsVZ/SfFGQIAfrvYcktQzd3BtN0bM+qi9NydnnUKA3Xww/7Xm1at5GGFKi6dQU9TzJeVHKVz4XA==",
+  "dgSpecHash": "WLwN+39TKIlD9l/67978NfEGwe68qTaa32a+cdOPOaO9zuRJ5CRTzWg8d6j+58UmY4hrXgMHkUuK8XYYo0QXPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\REBECAO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\REBECAO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

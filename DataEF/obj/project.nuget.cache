@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WBQUvWlvuVVLmFIg4HpUDGGsRqzLTwwldMdzRRN3uSqGZDebs+uFsiBscPvbSedBFwwmWQsRpP0s/vaXaZ5LnQ==",
+  "dgSpecHash": "Ox8doKKUP44UA0yUOKs6M5SrvP5Xolmz9GG2g5kLLQAeWGTlFpqJnHNabCFhFpbnbIRzcRWico3TLoB4wiVXhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\DataEF.csproj",
+  "projectFilePath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\DataEF\\DataEF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\REBECAO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\REBECAO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

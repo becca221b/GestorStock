@@ -2774,11 +2774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\DataEF.csproj",
+      "projectUniqueName": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\DataEF\\DataEF.csproj",
       "projectName": "DataEF",
-      "projectPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\DataEF.csproj",
+      "projectPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\DataEF\\DataEF.csproj",
       "packagesPath": "C:\\Users\\REBECAO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\DataEF\\obj\\",
+      "outputPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\DataEF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\REBECAO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2795,8 +2795,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Entities\\Entities.csproj"
+            "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Entities\\Entities.csproj"
             }
           }
         }

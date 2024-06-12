@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hgtfTlFTUSJFBXyOyhDvMP9VwtEdKxDo+p47RNwxZQLSD/ZiWhjIN6Ld2a/Ag43dlyPpOL9h4rgy6VoFur7+ag==",
+  "dgSpecHash": "NBpt4PM3iwjdXDqaP/5b6dp710jp3xkS89HRI7WG2mVaJKZXjilbH2/1sl19BFd1alpjqqIJAdGkJ3vPN10z+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\Proyecto Gestion de Stock\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\REBECAO\\Desktop\\Rebeca\\Programación III\\TP Integrador\\GestorStock\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\REBECAO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\REBECAO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
