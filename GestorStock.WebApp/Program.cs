@@ -1,4 +1,26 @@
+using Business;
+using Configuration;
+using DataEF.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Se obtiene la cadena de conexión de appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("StockConnectionString");
+
+//Se añade al scope de todo el proyecto
+
+ var config = new Config()
+{
+    ConnectionString = connectionString
+};
+
+builder.Services.AddScoped<Config>(p =>
+{
+    return config;
+});
+builder.Services.AddScoped<CompraRepository>();
+builder.Services.AddScoped<CompraBusinnes>();
+ 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
