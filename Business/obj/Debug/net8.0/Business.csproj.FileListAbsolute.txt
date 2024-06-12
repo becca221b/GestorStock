@@ -32,3 +32,21 @@ C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\Proyecto Gestion
 C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\Proyecto Gestion de Stock\Business\obj\Debug\net8.0\refint\Business.dll
 C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\Proyecto Gestion de Stock\Business\obj\Debug\net8.0\Business.pdb
 C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\Proyecto Gestion de Stock\Business\obj\Debug\net8.0\ref\Business.dll
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\Business.deps.json
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\Business.dll
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\Business.pdb
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\DataEF.dll
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\Entities.dll
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\DataEF.pdb
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\bin\Debug\net8.0\Entities.pdb
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.csproj.AssemblyReference.cache
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.sourcelink.json
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.csproj.Up2Date
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.dll
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\refint\Business.dll
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\Business.pdb
+C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\obj\Debug\net8.0\ref\Business.dll

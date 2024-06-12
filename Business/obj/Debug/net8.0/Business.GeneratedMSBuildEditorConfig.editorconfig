@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Business
-build_property.ProjectDir = C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\Proyecto Gestion de Stock\Business\
+build_property.ProjectDir = C:\Users\REBECAO\Desktop\Rebeca\Programación III\TP Integrador\GestorStock\Business\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
