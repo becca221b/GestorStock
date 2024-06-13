@@ -20,7 +20,7 @@
         <th>Producto</th>
         <th>Cantidad</th>
         <th>Usuario</th>
-        <th>Stock</th>
+       
     </tr>
 </thead>
 <tbody>
@@ -31,10 +31,10 @@
                 @c.CompraId
             </td>
             <td>
-                @c.FechaCompra
+                        @c.FechaCompra.ToString("dd/MM/yyyy")
             </td>
             <td>
-                Producto
+                @c.ProductoId
             </td>
             <td>
                @c.Cantidad
@@ -42,9 +42,7 @@
              <td>
                Usuario
             </td>
-             <td>
-               Stock
-            </td>
+            
         </tr>
     }
 </tbody>

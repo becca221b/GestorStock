@@ -1,4 +1,5 @@
 ﻿using Business;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestorStock.WebApp.Controllers
@@ -26,6 +27,28 @@ namespace GestorStock.WebApp.Controllers
             return View(compras);
         }
 
-        
+        public IActionResult Cargar()
+        {
+            //EESTE METODO SOLO DEVUELVE LA VISTA
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Cargar(Compra compra)
+        {
+            //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
+
+            var response = _compraBusinnes.Create(compra);
+            if (response)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+
     }
 }
