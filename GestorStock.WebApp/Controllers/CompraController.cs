@@ -8,9 +8,24 @@ namespace GestorStock.WebApp.Controllers
         private readonly ILogger<CompraController> _logger;
 
         private readonly CompraBusinnes _compraBusinnes;
+
+        public CompraController(CompraBusinnes compraBusinnes,
+            ILogger<CompraController> logger)
+        {
+            _logger = logger;
+
+            //Para hacer Inyección de dependencias
+
+            _compraBusinnes = compraBusinnes;
+        }
         public IActionResult Index()
         {
-            return View();
+            var compras = _compraBusinnes.GetAll();
+            
+
+            return View(compras);
         }
+
+        
     }
 }

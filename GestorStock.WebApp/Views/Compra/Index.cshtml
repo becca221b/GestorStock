@@ -1,0 +1,53 @@
+﻿@using Entities
+    
+@model List<Compra>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Compras</h1>
+
+<a asp-controller="Compra" asp-action="Cargar" class="btn btn-primary">Nueva Compra</a>
+
+<div class="col-sm-12 table-responsive table-condensed table-sm" style="font-size:small">
+<table class="table table-hover" id="dataTableJedis">
+<thead class="thead-light">
+    <tr>
+        <th>Compra Id</th>
+        <th>Fecha de Compra</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Usuario</th>
+        <th>Stock</th>
+    </tr>
+</thead>
+<tbody>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>
+                @c.CompraId
+            </td>
+            <td>
+                @c.FechaCompra
+            </td>
+            <td>
+                Producto
+            </td>
+            <td>
+               @c.Cantidad
+            </td>
+             <td>
+               Usuario
+            </td>
+             <td>
+               Stock
+            </td>
+        </tr>
+    }
+</tbody>
+
+</table>
+</div>
