@@ -28,8 +28,26 @@ namespace DataEF.Repository
                 return compras;
 
             }
-
             
+        }
+
+        public bool Create(Compra compra)
+        {
+            bool result;
+            try
+            {
+                using (var db = new GestionStockContext(_config))
+                {
+                    db.Add(compra);
+                    db.SaveChanges();
+                }
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
+            return result;
         }
     }
 }

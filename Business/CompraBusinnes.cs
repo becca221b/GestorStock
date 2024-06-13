@@ -20,5 +20,10 @@ namespace Business
         {
             return _compraRepository.GetAll();
         }
+
+        public bool Create(Compra compra)
+        {
+            return _compraRepository.Create(compra);
+        }
     }
 }
