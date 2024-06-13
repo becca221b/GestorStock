@@ -1,4 +1,5 @@
 ﻿using DataEF.Repository;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace Business
         public CompraBusinnes(CompraRepository compraRepository)
         {
             _compraRepository = compraRepository;
+        }
+
+        public List<Compra> GetAll()
+        {
+            return _compraRepository.GetAll();
         }
     }
 }
