@@ -1,0 +1,49 @@
+﻿@using Entities
+@using Entities.DTO
+    
+@model List<VentaDTO>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Ventas</h1>
+
+<a asp-controller="Venta" asp-action="CargarVenta" class="btn btn-primary">Nueva Venta</a>
+
+<div class="col-sm-12 table-responsive table-condensed table-sm" style="font-size:small">
+<table class="table table-hover" id="dataTableJedis">
+<thead class="thead-light">
+    <tr>
+        
+        
+        <th>Producto</th>
+        <th>Fecha de Venta</th>
+        <th>Cantidad</th>
+      
+       
+    </tr>
+</thead>
+<tbody>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <td>
+                @v.Producto
+            </td>
+            <td>
+                @v.FechaVenta.ToString("dd/MM/yyyy")
+            </td>
+         
+            <td>
+               @v.Cantidad
+            </td>
+           
+            
+        </tr>
+    }
+</tbody>
+
+</table>
+</div>
