@@ -17,14 +17,14 @@ namespace Business
             _ventaRepository = ventaRepository;
         }
 
-        public List<CompraDTO> GetAll()
+        public List<VentaDTO> GetAll()
         {
             return _ventaRepository.GetAll();
         }
 
-        public bool Create(Compra compra)
+        public bool Create(Venta venta)
         {
-            return _ventaRepository.Create(compra);
+            return _ventaRepository.Create(venta);
         }
     }
 }
