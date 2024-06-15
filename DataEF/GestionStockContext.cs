@@ -17,11 +17,11 @@ namespace DataEF
             _config = config;
         }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Producto> Producto { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Compra> Compra { get; set; }
-        public DbSet<Venta> Ventas { get; set; }
+        public DbSet<Venta> Venta { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
