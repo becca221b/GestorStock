@@ -1,5 +1,6 @@
 ﻿using Configuration;
 using Entities;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,24 @@ namespace DataEF.Repository
             _config = config;
         }
 
-        public List<Compra> GetAll()
+        public List<CompraDTO> GetAll()
         {
-            //var result = new Compra();
+            var lista = new CompraDTO();
 
             using (var db = new GestionStockContext(_config))
             {
                 var compras = (from c in db.Compra
-                                select c).ToList();
+                               join p in db.Producto on c.CompraId equals p.ProductoId
+                                select new CompraDTO
+                                {
+                                    //CompraId= c.CompraId,
+                                    //ProductoId= c.ProductoId,
+                                    Producto = p.Nombre,
+                                    Cantidad = c.Cantidad,
+                                    FechaCompra = c.FechaCompra,
+
+
+                                }).ToList();
                 //VER query Y dbo.Compra
                 return compras;
 

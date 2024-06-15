@@ -1,5 +1,6 @@
 ﻿using DataEF.Repository;
 using Entities;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Business
             _compraRepository = compraRepository;
         }
 
-        public List<Compra> GetAll()
+        public List<CompraDTO> GetAll()
         {
             return _compraRepository.GetAll();
         }

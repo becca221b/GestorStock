@@ -1,6 +1,7 @@
 ﻿@using Entities
+@using Entities.DTO
     
-@model List<Compra>
+@model List<CompraDTO>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,11 +16,12 @@
 <table class="table table-hover" id="dataTableJedis">
 <thead class="thead-light">
     <tr>
-        <th>Compra Id</th>
-        <th>Fecha de Compra</th>
+        
+        
         <th>Producto</th>
+        <th>Fecha de Compra</th>
         <th>Cantidad</th>
-        <th>Usuario</th>
+      
        
     </tr>
 </thead>
@@ -28,20 +30,16 @@
     {
         <tr>
             <td>
-                @c.CompraId
+                @c.Producto
             </td>
             <td>
-                        @c.FechaCompra.ToString("dd/MM/yyyy")
+                @c.FechaCompra.ToString("dd/MM/yyyy")
             </td>
-            <td>
-                @c.ProductoId
-            </td>
+         
             <td>
                @c.Cantidad
             </td>
-             <td>
-               Usuario
-            </td>
+           
             
         </tr>
     }
