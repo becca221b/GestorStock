@@ -24,14 +24,14 @@ namespace DataEF.Repository
             using (var db = new GestionStockContext(_config))
             {
                 var ventas = (from c in db.Venta
-                               join p in db.Producto on c.CompraId equals p.ProductoId
+                               join p in db.Producto on c.VentaId equals p.ProductoId
                                select new VentaDTO
                                {
                                    //CompraId= c.CompraId,
                                    //ProductoId= c.ProductoId,
                                    Producto = p.Nombre,
                                    Cantidad = c.Cantidad,
-                                   FechaCompra = c.FechaVenta,
+                                   FechaVenta = c.FechaVenta,
 
 
                                }).ToList();
