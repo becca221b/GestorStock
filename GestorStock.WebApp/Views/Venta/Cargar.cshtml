@@ -1,0 +1,43 @@
+﻿@using Entities
+
+@model Venta
+
+
+@{
+    ViewData["Title"] = "Cargar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cargar</h1>
+<div class="card">
+    <div class="card-header">
+        Nueva Compra
+    </div>
+    <div class="card-body">
+        <form asp-action="Cargar" asp-controller="Venta" method="post">
+            <div class="mb-3">
+                <input asp-for="VentaId" type="hidden" class="form-control" id="inputId">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Producto</label>
+                <input asp-for="ProductoId" type="number" class="form-control" id="inputProducto">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cantidad</label>
+                <input asp-for="Cantidad" type="number" class="form-control" id="inputCantidad">
+            </div>
+            <div class="mb-3">
+                <label for="inputUsuario" class="form-label">Usuario</label>
+                <input asp-for="UsuarioId" type="text" class="form-control" id="inputUsuario">
+            </div>
+            <div class="mb-3">
+                <label for="inputDate" class="form-label">Fecha de Compra</label>
+                <input asp-for="FechaVenta" type="date" class="form-control" id="inputDate">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Index" asp-asp-controller="Venta">Regresar a la Lista de Ventas</a>
+        </form>
+    </div>
+</div>
+
