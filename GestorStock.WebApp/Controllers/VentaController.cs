@@ -1,7 +1,8 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.Data.SqlClient;
+
 
 namespace GestorStock.WebApp.Controllers
 {
@@ -21,10 +22,12 @@ namespace GestorStock.WebApp.Controllers
 
             _ventaBusinnes = ventaBusinnes;
         }
-        public IActionResult Index()
+        public IActionResult Index(string sortOrder)
         {
-            var ventas = _ventaBusinnes.GetAll();
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "name";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
 
+            var ventas = _ventaBusinnes.GetAll(sortOrder);
 
             return View(ventas);
         }

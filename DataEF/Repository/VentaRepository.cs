@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace DataEF.Repository
 {
@@ -17,7 +18,7 @@ namespace DataEF.Repository
             _config = config;
         }
 
-        public List<VentaDTO> GetAll()
+        public List<VentaDTO> GetAll(string sortOrder)
         {
             var lista = new VentaDTO();
 
@@ -34,9 +35,25 @@ namespace DataEF.Repository
                                    FechaVenta = v.FechaVenta,
 
 
-                               }).ToList();
+                               });
                 //VER query Y dbo.Compra
-                return ventas;
+                switch (sortOrder)
+                {
+                    case "name_desc":
+                        ventas = ventas.OrderByDescending(v => v.Producto);
+                        break;
+                    case "name":
+                        ventas = ventas.OrderBy(c => c.Producto);
+                        break;
+                    case "date_desc":
+                        ventas = ventas.OrderByDescending(c => c.FechaVenta);
+                        break;
+                    default:
+                        ventas = ventas.OrderBy(c => c.FechaVenta);
+                        break;
+                }
+
+                return ventas.ToList();
 
             }
 

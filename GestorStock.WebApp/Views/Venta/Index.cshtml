@@ -13,13 +13,13 @@
 <a asp-controller="Venta" asp-action="Cargar" class="btn btn-primary">Nueva Venta</a>
 
 <div class="col-sm-12 table-responsive table-condensed table-sm" style="font-size:small">
-<table class="table table-hover" id="dataTableJedis">
+<table class="table table-hover" id="dataTableVentas">
 <thead class="thead-light">
     <tr>
         
         
-        <th>Producto</th>
-        <th>Fecha de Venta</th>
+        <th>@Html.ActionLink("Producto", "Index", new { sortOrder = ViewBag.NameSortParm })</th>
+        <th>@Html.ActionLink("Fecha de Venta", "Index", new { sortOrder = ViewBag.DateSortParm })</th>
         <th>Cantidad</th>
       
        
