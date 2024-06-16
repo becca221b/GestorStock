@@ -19,12 +19,12 @@ namespace DataEF.Repository
 
         public List<VentaDTO> GetAll()
         {
-            var lista = new CompraDTO();
+            var lista = new VentaDTO();
 
             using (var db = new GestionStockContext(_config))
             {
                 var ventas = (from v in db.Venta
-                               join p in db.Producto on c.VentaId equals p.ProductoId
+                               join p in db.Producto on v.VentaId equals p.ProductoId
                                select new VentaDTO
                                {
                                    //CompraId= c.CompraId,

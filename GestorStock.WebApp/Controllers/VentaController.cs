@@ -28,14 +28,14 @@ namespace GestorStock.WebApp.Controllers
             return View(ventas);
         }
 
-        public IActionResult CargarVenta()
+        public IActionResult Cargar()
         {
             //EESTE METODO SOLO DEVUELVE LA VISTA
             return View();
         }
 
         [HttpPost]
-        public IActionResult CargarVenta(Venta venta)
+        public IActionResult Cargar(Venta venta)
         {
             //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
 
