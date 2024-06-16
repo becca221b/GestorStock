@@ -1,6 +1,7 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GestorStock.WebApp.Controllers
 {
@@ -38,16 +39,16 @@ namespace GestorStock.WebApp.Controllers
         public IActionResult Cargar(Venta venta)
         {
             //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
-
-            var response = _ventaBusinnes.Create(venta);
-            if (response)
-            {
+           var response = _ventaBusinnes.Create(venta);
+           if (response)
+           {
                 return RedirectToAction("Index");
-            }
-            else
-            {
+           }
+           else
+           {
                 return View();
-            }
+           }
+            
         }
         
     }

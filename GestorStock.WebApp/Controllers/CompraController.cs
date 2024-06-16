@@ -37,15 +37,24 @@ namespace GestorStock.WebApp.Controllers
         public IActionResult Cargar(Compra compra)
         {
             //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
-
-            var response = _compraBusinnes.Create(compra);
-            if (response)
+            ModelState.Remove("CompraId");
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                var response = _compraBusinnes.Create(compra);
+                if (response)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View();
+                }
+
             }
+
             else
             {
-                return View();
+                return View(compra);
             }
         }
 

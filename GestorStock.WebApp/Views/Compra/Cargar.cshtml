@@ -33,6 +33,7 @@
             <div class="mb-3">
                 <label for="inputDate" class="form-label">Fecha de Compra</label>
                 <input asp-for="FechaCompra" type="date" class="form-control" id="inputDate">
+                @Html.ValidationMessageFor(model => model.FechaCompra, null, new { @class = "text-danger" })
             </div>
 
             <button type="submit" class="btn btn-primary">Guardar</button>
