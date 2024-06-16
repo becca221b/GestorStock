@@ -18,8 +18,8 @@
     <tr>
         
         
-        <th>Producto</th>
-        <th>Fecha de Compra</th>
+        <th>@Html.ActionLink("Producto", "Index", new { sortOrder = ViewBag.NameSortParm })</th>
+        <th>@Html.ActionLink("Fecha de Compra", "Index", new { sortOrder = ViewBag.DateSortParm })</th>
         <th>Cantidad</th>
       
        

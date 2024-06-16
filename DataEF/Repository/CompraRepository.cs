@@ -1,6 +1,7 @@
 ﻿using Configuration;
 using Entities;
 using Entities.DTO;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace DataEF.Repository
             _config = config;
         }
 
-        public List<CompraDTO> GetAll()
+        public List<CompraDTO> GetAll(string sortOrder)
         {
             var lista = new CompraDTO();
 
@@ -34,9 +35,25 @@ namespace DataEF.Repository
                                     FechaCompra = c.FechaCompra,
 
 
-                                }).ToList();
-                //VER query Y dbo.Compra
-                return compras;
+                                });
+                
+                switch (sortOrder)
+                {
+                    case "name_desc":
+                        compras = compras.OrderByDescending(c => c.Producto);
+                        break;
+                    case "name":
+                        compras = compras.OrderBy(c => c.Producto);
+                        break;
+                    case "date_desc":
+                        compras = compras.OrderByDescending(c => c.FechaCompra);
+                        break;
+                    default:
+                        compras = compras.OrderBy(c => c.FechaCompra);
+                        break;
+                }
+                
+                return compras.ToList();
 
             }
             
