@@ -12,6 +12,15 @@
 
 <a asp-controller="Compra" asp-action="Cargar" class="btn btn-primary">Nueva Compra</a>
 
+<form asp-action="Index" asp-controller="Compra" class="row row-cols-lg-auto g-3 align-items-center">
+    <div class="input-group">
+        <div class="form-outline" data-mdb-input-init>
+            <input type="search" name="buscar" id="form1" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-sm btn-primary">Search</button>
+    </div>
+</form>
+
 <div class="col-sm-12 table-responsive table-condensed table-sm" style="font-size:small">
 <table class="table table-hover" id="dataTableCompras">
 <thead class="thead-light">

@@ -21,8 +21,8 @@ namespace GestorStock.WebApp.Controllers
         }
         public IActionResult Index(string sortOrder)
         {
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "name";
-            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name" : "name_desc";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "" : "Date";
 
             var compras = _compraBusinnes.GetAll(sortOrder);
             

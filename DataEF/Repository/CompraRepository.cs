@@ -45,11 +45,11 @@ namespace DataEF.Repository
                     case "name":
                         compras = compras.OrderBy(c => c.Producto);
                         break;
-                    case "date_desc":
-                        compras = compras.OrderByDescending(c => c.FechaCompra);
+                    case "Date":
+                        compras = compras.OrderBy(c => c.FechaCompra);
                         break;
                     default:
-                        compras = compras.OrderBy(c => c.FechaCompra);
+                        compras = compras.OrderByDescending(c => c.FechaCompra);
                         break;
                 }
                 
