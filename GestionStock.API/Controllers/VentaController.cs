@@ -31,14 +31,14 @@ namespace GestionStockAPI.Controllers
 
         public IActionResult Cargar()
         {
-            //EESTE METODO SOLO DEVUELVE LA VISTA
+            
             return View();
         }
 
         [HttpPost]
         public IActionResult Cargar(Venta venta)
         {
-            //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
+          
             var response = _ventaBusinnes.Create(venta);
             if (response)
             {
