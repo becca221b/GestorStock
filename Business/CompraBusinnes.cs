@@ -17,9 +17,10 @@ namespace Business
             _compraRepository = compraRepository;
         }
 
-        public List<CompraDTO> GetAll(string sortOrder)
+        public List<CompraDTO> GetAll(string sortOrder, string buscar)
         {
-            return _compraRepository.GetAll(sortOrder);
+            
+            return _compraRepository.GetAll(sortOrder, buscar);
         }
 
         public bool Create(Compra compra)

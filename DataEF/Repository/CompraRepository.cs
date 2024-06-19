@@ -18,9 +18,9 @@ namespace DataEF.Repository
             _config = config;
         }
 
-        public List<CompraDTO> GetAll(string sortOrder)
+        public List<CompraDTO> GetAll(string sortOrder, string buscar)
         {
-            var lista = new CompraDTO();
+            //var lista = new CompraDTO();
 
             using (var db = new GestionStockContext(_config))
             {
@@ -36,7 +36,12 @@ namespace DataEF.Repository
 
 
                                 });
-                
+
+                if (!String.IsNullOrEmpty(buscar))
+                {
+                    compras = (compras.Where(c=>c.Producto.Contains(buscar)));
+                }
+
                 switch (sortOrder)
                 {
                     case "name_desc":

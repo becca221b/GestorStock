@@ -19,14 +19,13 @@ namespace GestorStock.WebApp.Controllers
 
             _compraBusinnes = compraBusinnes;
         }
-        public IActionResult Index(string sortOrder)
+        public IActionResult Index(string sortOrder, string buscar)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name" : "name_desc";
             ViewBag.DateSortParm = sortOrder == "Date" ? "" : "Date";
 
-            var compras = _compraBusinnes.GetAll(sortOrder);
-            
-
+            var compras = _compraBusinnes.GetAll(sortOrder, buscar);
+                      
             return View(compras);
         }
 
