@@ -1,6 +1,7 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace GestorStock.WebApp.Controllers
 {
@@ -19,14 +20,28 @@ namespace GestorStock.WebApp.Controllers
 
             _compraBusinnes = compraBusinnes;
         }
-        public IActionResult Index(string sortOrder, string buscar)
+        public IActionResult Index(string sortOrder, string currentFilter, string buscar, int? page)
         {
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name" : "name_desc";
             ViewBag.DateSortParm = sortOrder == "Date" ? "" : "Date";
 
+            if (buscar != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                buscar = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = buscar;
+
             var compras = _compraBusinnes.GetAll(sortOrder, buscar);
-                      
-            return View(compras);
+
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(compras.ToPagedList(pageNumber, pageSize));
         }
 
         public IActionResult Cargar()

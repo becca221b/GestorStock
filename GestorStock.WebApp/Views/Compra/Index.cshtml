@@ -1,10 +1,15 @@
 ﻿@using Entities
 @using Entities.DTO
+
+@model X.PagedList.IPagedList<CompraDTO>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
     
-@model List<CompraDTO>
+
 
 @{
     ViewData["Title"] = "Index";
+    ViewBag.Title = "Compras";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -27,8 +32,8 @@
     <tr>
         
         
-        <th>@Html.ActionLink("Producto", "Index", new { sortOrder = ViewBag.NameSortParm })</th>
-        <th>@Html.ActionLink("Fecha de Compra", "Index", new { sortOrder = ViewBag.DateSortParm })</th>
+        <th>@Html.ActionLink("Producto", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter=ViewBag.CurrentFilter })</th>
+        <th>@Html.ActionLink("Fecha de Compra", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilte })</th>
         <th>Cantidad</th>
       
        
@@ -55,4 +60,9 @@
 </tbody>
 
 </table>
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+            new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 </div>
