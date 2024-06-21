@@ -1,7 +1,9 @@
 ﻿@using Entities
 @using Entities.DTO
     
-@model List<VentaDTO>
+@model X.PagedList.IPagedList<CompraDTO>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
 
 @{
     ViewData["Title"] = "Index";
