@@ -17,9 +17,9 @@ namespace Business
             _ventaRepository = ventaRepository;
         }
 
-        public List<VentaDTO> GetAll(string sortOrder)
+        public List<VentaDTO> GetAll(string sortOrder, string buscar)
         {
-            return _ventaRepository.GetAll(sortOrder);
+            return _ventaRepository.GetAll(sortOrder, buscar);
         }
 
         public bool Create(Venta venta)

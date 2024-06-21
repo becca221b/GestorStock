@@ -18,7 +18,7 @@ namespace DataEF.Repository
             _config = config;
         }
 
-        public List<VentaDTO> GetAll(string sortOrder)
+        public List<VentaDTO> GetAll(string sortOrder, string buscar)
         {
             var lista = new VentaDTO();
 
@@ -36,7 +36,13 @@ namespace DataEF.Repository
 
 
                                });
-                //VER query Y dbo.Compra
+
+
+                if (!String.IsNullOrEmpty(buscar))
+                {
+                    ventas = (ventas.Where(c => c.Producto.Contains(buscar)));
+                }
+                
                 switch (sortOrder)
                 {
                     case "name_desc":

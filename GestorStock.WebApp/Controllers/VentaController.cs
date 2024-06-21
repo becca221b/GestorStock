@@ -22,12 +22,12 @@ namespace GestorStock.WebApp.Controllers
 
             _ventaBusinnes = ventaBusinnes;
         }
-        public IActionResult Index(string sortOrder)
+        public IActionResult Index(string sortOrder, string buscar)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name" : "name_desc";
             ViewBag.DateSortParm = sortOrder == "Date" ? "" : "Date";
 
-            var ventas = _ventaBusinnes.GetAll(sortOrder);
+            var ventas = _ventaBusinnes.GetAll(sortOrder, buscar);
 
             return View(ventas);
         }
