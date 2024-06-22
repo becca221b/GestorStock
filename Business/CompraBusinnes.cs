@@ -27,15 +27,15 @@ namespace Business
         {
             return _compraRepository.Create(compra);
         }
-
-        public List<String> GetCategories()
+        
+        public List<Categoria> GetCategories()
         {
             return _compraRepository.GetCategories();
         }
 
-        public List<String> GetProductsByCategoryName(string categoryName)
+        public List<Producto> GetProductsByCategoryId(int categoryId)
         {
-            return _compraRepository.GetProductsByCategoryName(categoryName);
+            return _compraRepository.GetProductsByCategoryId(categoryId);
         }
     }
 }

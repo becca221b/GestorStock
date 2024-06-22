@@ -82,5 +82,28 @@ namespace DataEF.Repository
             }
             return result;
         }
+
+        public List<Categoria> GetCategories()
+        {
+            using (var db = new GestionStockContext(_config))
+            {
+                var categorias = (from c in db.Categoria
+                                  select c).ToList();
+                return categorias;
+            }
+        }
+
+        public List<Producto> GetProductsByCategoryId(int categoryId)
+        {
+            using (var db = new GestionStockContext(_config))
+            {
+                var productos = (from p in db.Producto
+                               join c in db.Categoria on p.CategoriaId equals c.CategoriaId
+                               where p.CategoriaId == categoryId
+                               select p).ToList();
+
+                return productos;
+            }
+        }
     }
 }

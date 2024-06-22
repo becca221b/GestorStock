@@ -1,6 +1,7 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using X.PagedList;
 
 namespace GestorStock.WebApp.Controllers
@@ -48,8 +49,16 @@ namespace GestorStock.WebApp.Controllers
         {
             //EESTE METODO SOLO DEVUELVE LA VISTA
             var categorias = _compraBusinnes.GetCategories();
-            ViewBag.Categorias = categorias;
-            ViewBag.Productos = _compraBusinnes.GetProductsByCategoryName(categoryName);
+            var lst = (from c in categorias
+                      select new SelectListItem
+                      {
+                          Value = c.CategoriaId.ToString(),
+                          Text = c.Nombre
+                      }).ToList();
+            ViewBag.Categorias = lst;
+
+            var productos = _compraBusinnes.GetProductsByCategoryId(categoryId);
+            //ViewBag.Productos
             return View();
         }
 
@@ -76,6 +85,28 @@ namespace GestorStock.WebApp.Controllers
             {
                 return View(compra);
             }
+        }
+
+        public JsonResult Producto(int categoriaId)
+        {
+            List<ElementJsonIntKey> lista = new List<ElementJsonIntKey>();
+
+            var lst = _compraBusinnes.GetProductsByCategoryId(categoriaId);
+
+            var productos = (from p in lst
+                             select new ElementJsonIntKey
+                             {
+                                 Value= p.ProductoId,
+                                 Text = p.Nombre
+                             } ).ToList();
+
+
+        }
+
+        public class ElementJsonIntKey
+        {
+            public int Value { get; set; }
+            public string Text { get; set;}
         }
 
 
