@@ -44,9 +44,12 @@ namespace GestorStock.WebApp.Controllers
             return View(compras.ToPagedList(pageNumber, pageSize));
         }
 
-        public IActionResult Cargar()
+        public IActionResult Cargar(string categoryName)
         {
             //EESTE METODO SOLO DEVUELVE LA VISTA
+            var categorias = _compraBusinnes.GetCategories();
+            ViewBag.Categorias = categorias;
+            ViewBag.Productos = _compraBusinnes.GetProductsByCategoryName(categoryName);
             return View();
         }
 

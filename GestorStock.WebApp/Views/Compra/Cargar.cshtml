@@ -18,8 +18,19 @@
             <div class="mb-3">
                 <input asp-for="CompraId" type="hidden" class="form-control" id="inputId">
             </div>
-            <div class="mb-3">
-                <label class="form-label">Producto</label>
+            <div class="mb-3 form-group">
+                <label>Categoría</label>
+                
+                <select class="form-select" asp-items= "@(new SelectList(ViewBag.Categorias))" name="categoryName">
+                    <option selected>Seleccione Categoría</option>
+                </select>
+                
+
+                @Html.DropDownList("ProductoId",
+                                    new SelectList(ViewBag.Productos,"ProductoId","Nombre"),
+                                    "Select Producto",
+                                    new { @class = "form-select" })
+                
                 <input asp-for="ProductoId" type="number" class="form-control" id="inputProducto">
             </div>
             <div class="mb-3">

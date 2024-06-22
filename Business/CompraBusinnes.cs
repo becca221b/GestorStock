@@ -27,5 +27,15 @@ namespace Business
         {
             return _compraRepository.Create(compra);
         }
+
+        public List<String> GetCategories()
+        {
+            return _compraRepository.GetCategories();
+        }
+
+        public List<String> GetProductsByCategoryName(string categoryName)
+        {
+            return _compraRepository.GetProductsByCategoryName(categoryName);
+        }
     }
 }
