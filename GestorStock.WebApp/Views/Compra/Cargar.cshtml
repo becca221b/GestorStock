@@ -20,11 +20,16 @@
             </div>
             <div class="mb-3 form-group">
                 <label>Categoría</label>
-                @Html.DropDownList("Categoria", (List<SelectListItem>)ViewBag.Categorias, new { @class = "form-select" })
+                @Html.DropDownList("Categoria", (List<SelectListItem>)ViewBag.Categorias, new { @class = "form-select", id="categName"})
             </div>
             <div class="mb-3 form-group">
-                <label>Producto/label>
-                @Html.DropDownList("Categoria", (List<SelectListItem>)ViewBag.Categorias, new { @class = "form-select" })
+                <label>Producto</label>
+                <select id="producto" name="producto" class="form-select">
+                    <option value="0">Seleccione el producto</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input asp-for="ProductoId" type="hidden" class="form-control" id="productoId" value="producto">
             </div>
             <div class="mb-3">
                 <label class="form-label">Cantidad</label>
@@ -45,3 +50,31 @@
         </form>
     </div>
 </div>
+
+<script>
+    var comboCateg= document.getElementById("categName")
+    comboCateg.addEventListener("change", Refresh);
+    Refresh();
+
+    function Refresh(){
+        fetch("@Url.Content("~/Compra/Producto")"+ "?categoriaId="+ comboCateg.value)
+            .then(function (result) {
+                if(result.ok){
+                    return result.json();
+                }
+            })
+            .then(function(data){
+                console.log(data);
+                miSelect = document.getElementById("producto");
+                miSelect.innerHTML="";
+                data.forEach(function (element) {
+                    
+                    let option = document.createElement("option");
+                    option.appendChild(document.createTextNode(element.text));
+                    option.value = element.value;
+
+                    miSelect.appendChild(option);
+                })
+            })
+    }
+</script>

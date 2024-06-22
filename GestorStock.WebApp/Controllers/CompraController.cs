@@ -1,7 +1,9 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Globalization;
 using X.PagedList;
 
 namespace GestorStock.WebApp.Controllers
@@ -45,7 +47,7 @@ namespace GestorStock.WebApp.Controllers
             return View(compras.ToPagedList(pageNumber, pageSize));
         }
 
-        public IActionResult Cargar(string categoryName)
+        public IActionResult Cargar(int categoryId)
         {
             //EESTE METODO SOLO DEVUELVE LA VISTA
             var categorias = _compraBusinnes.GetCategories();
@@ -63,10 +65,15 @@ namespace GestorStock.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cargar(Compra compra)
+        public IActionResult Cargar(Compra compra, string producto)
         {
             //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
             ModelState.Remove("CompraId");
+            ModelState.Remove("ProductoId");
+            compra.ProductoId = Int32.Parse(producto);
+            
+
+
             if (ModelState.IsValid)
             {
                 var response = _compraBusinnes.Create(compra);
@@ -87,20 +94,21 @@ namespace GestorStock.WebApp.Controllers
             }
         }
 
+        [HttpGet]
         public JsonResult Producto(int categoriaId)
         {
             List<ElementJsonIntKey> lista = new List<ElementJsonIntKey>();
 
             var lst = _compraBusinnes.GetProductsByCategoryId(categoriaId);
 
-            var productos = (from p in lst
+            lista = (from p in lst
                              select new ElementJsonIntKey
                              {
                                  Value= p.ProductoId,
                                  Text = p.Nombre
-                             } ).ToList();
+                             }).ToList();
 
-
+            return Json(lista);
         }
 
         public class ElementJsonIntKey

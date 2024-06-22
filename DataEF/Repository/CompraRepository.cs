@@ -25,7 +25,7 @@ namespace DataEF.Repository
             using (var db = new GestionStockContext(_config))
             {
                 var compras = (from c in db.Compra
-                               join p in db.Producto on c.CompraId equals p.ProductoId
+                               join p in db.Producto on c.ProductoId equals p.ProductoId
                                 select new CompraDTO
                                 {
                                     //CompraId= c.CompraId,
