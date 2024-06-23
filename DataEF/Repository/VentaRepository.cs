@@ -20,12 +20,11 @@ namespace DataEF.Repository
 
         public List<VentaDTO> GetAll(string sortOrder, string buscar)
         {
-            var lista = new VentaDTO();
-
+            
             using (var db = new GestionStockContext(_config))
             {
                 var ventas = (from v in db.Venta
-                               join p in db.Producto on v.VentaId equals p.ProductoId
+                               join p in db.Producto on v.ProductoId equals p.ProductoId
                                select new VentaDTO
                                {
                                    //CompraId= c.CompraId,
@@ -82,6 +81,29 @@ namespace DataEF.Repository
                 result = false;
             }
             return result;
+        }
+
+        public List<Categoria> GetCategories()
+        {
+            using (var db = new GestionStockContext(_config))
+            {
+                var categorias = (from c in db.Categoria
+                                  select c).ToList();
+                return categorias;
+            }
+        }
+
+        public List<Producto> GetProductsByCategoryId(int categoryId)
+        {
+            using (var db = new GestionStockContext(_config))
+            {
+                var productos = (from p in db.Producto
+                                 join c in db.Categoria on p.CategoriaId equals c.CategoriaId
+                                 where p.CategoriaId == categoryId
+                                 select p).ToList();
+
+                return productos;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
 using X.PagedList;
 
@@ -47,17 +48,28 @@ namespace GestorStock.WebApp.Controllers
             return View(ventas.ToPagedList(pageNumber, pageSize));
         }
 
-        public IActionResult Cargar()
+        public IActionResult Cargar(int categoryId)
         {
+            var categorias = _ventaBusinnes.GetCategories();
+            var lst = (from c in categorias
+                       select new SelectListItem
+                       {
+                           Value = c.CategoriaId.ToString(),
+                           Text = c.Nombre
+                       }).ToList();
+            ViewBag.Categorias = lst;
+
+            var productos = _ventaBusinnes.GetProductsByCategoryId(categoryId);
             //EESTE METODO SOLO DEVUELVE LA VISTA
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cargar(Venta venta)
+        public IActionResult Cargar(Venta venta, string producto)
         {
+            venta.ProductoId = Int32.Parse(producto);
             //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
-           var response = _ventaBusinnes.Create(venta);
+            var response = _ventaBusinnes.Create(venta);
            if (response)
            {
                 return RedirectToAction("Index");
@@ -68,6 +80,29 @@ namespace GestorStock.WebApp.Controllers
            }
             
         }
-        
+
+        [HttpGet]
+        public JsonResult Producto(int categoriaId)
+        {
+            List<ElementJsonIntKey> lista = new List<ElementJsonIntKey>();
+
+            var lst = _ventaBusinnes.GetProductsByCategoryId(categoriaId);
+
+            lista = (from p in lst
+                     select new ElementJsonIntKey
+                     {
+                         Value = p.ProductoId,
+                         Text = p.Nombre
+                     }).ToList();
+
+            return Json(lista);
+        }
+
+        public class ElementJsonIntKey
+        {
+            public int Value { get; set; }
+            public string Text { get; set; }
+        }
+
     }
 }

@@ -26,5 +26,15 @@ namespace Business
         {
             return _ventaRepository.Create(venta);
         }
+
+        public List<Categoria> GetCategories()
+        {
+            return _ventaRepository.GetCategories();
+        }
+
+        public List<Producto> GetProductsByCategoryId(int categoryId)
+        {
+            return _ventaRepository.GetProductsByCategoryId(categoryId);
+        }
     }
 }
