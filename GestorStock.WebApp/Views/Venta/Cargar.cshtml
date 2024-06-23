@@ -41,7 +41,7 @@
             </div>
             <div class="mb-3">
                 <label for="inputDate" class="form-label">Fecha de Compra</label>
-                <input asp-for="FechaVenta" type="date" class="form-control" id="inputDate">
+                <input asp-for="FechaVenta" type="text" class="form-control" id="inputDate" value=@DateTime.Today.ToString("dd/MM/yyyy") readonly>
             </div>
 
             <button type="submit" class="btn btn-primary">Guardar</button>
@@ -76,5 +76,8 @@
                 })
             })
     }
+
+    const dateControl = document.querySelector('input[type="date"]');
+    dateControl.value = DateTime.Today.ToString("yyyy/mm/dd");
 </script>
 

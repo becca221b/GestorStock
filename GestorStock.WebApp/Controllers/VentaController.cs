@@ -59,7 +59,8 @@ namespace GestorStock.WebApp.Controllers
                        }).ToList();
             ViewBag.Categorias = lst;
 
-            var productos = _ventaBusinnes.GetProductsByCategoryId(categoryId);
+            //var productos = _ventaBusinnes.GetProductsByCategoryId(categoryId);
+
             //EESTE METODO SOLO DEVUELVE LA VISTA
             return View();
         }
