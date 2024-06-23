@@ -12,5 +12,7 @@ namespace Entities
         public string Nombre { get; set; }
         public int CategoriaId { get; set; }
         public bool Habilitado { get; set; }
+
+        public int Stock {  get; set; }
     }
 }

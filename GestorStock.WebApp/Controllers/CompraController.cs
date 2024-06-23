@@ -14,7 +14,10 @@ namespace GestorStock.WebApp.Controllers
 
         private readonly CompraBusinnes _compraBusinnes;
 
-        public CompraController(CompraBusinnes compraBusinnes,
+        private readonly ProductoBusinnes _productoBusinnes;
+
+
+        public CompraController(CompraBusinnes compraBusinnes, ProductoBusinnes productoBusinnes,
             ILogger<CompraController> logger)
         {
             _logger = logger;
@@ -22,6 +25,8 @@ namespace GestorStock.WebApp.Controllers
             //Para hacer Inyección de dependencias
 
             _compraBusinnes = compraBusinnes;
+
+            _productoBusinnes = productoBusinnes;
         }
         public IActionResult Index(string sortOrder, string currentFilter, string buscar, int? page)
         {
@@ -79,6 +84,7 @@ namespace GestorStock.WebApp.Controllers
                 var response = _compraBusinnes.Create(compra);
                 if (response)
                 {
+                    _productoBusinnes.SumarStock(compra.Cantidad, compra.ProductoId);
                     return RedirectToAction("Index");
                 }
                 else
