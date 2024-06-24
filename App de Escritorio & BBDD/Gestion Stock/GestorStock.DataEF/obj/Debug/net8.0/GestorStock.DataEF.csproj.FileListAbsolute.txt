@@ -1,0 +1,17 @@
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\bin\Debug\net8.0\GestorStock.DataEF.deps.json
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\bin\Debug\net8.0\GestorStock.DataEF.runtimeconfig.json
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\bin\Debug\net8.0\GestorStock.DataEF.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\bin\Debug\net8.0\GestorStock.DataEF.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\bin\Debug\net8.0\GestorStock.Entities.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\bin\Debug\net8.0\GestorStock.Entities.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.csproj.AssemblyReference.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.AssemblyInfoInputs.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.AssemblyInfo.cs
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorSt.FE8060D3.Up2Date
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\refint\GestorStock.DataEF.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\GestorStock.DataEF.genruntimeconfig.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.DataEF\obj\Debug\net8.0\ref\GestorStock.DataEF.dll

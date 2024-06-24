@@ -1,0 +1,11 @@
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\bin\Debug\net8.0\GestorStock.Seguridad.deps.json
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\bin\Debug\net8.0\GestorStock.Seguridad.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\bin\Debug\net8.0\GestorStock.Seguridad.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\GestorStock.Seguridad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\GestorStock.Seguridad.AssemblyInfoInputs.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\GestorStock.Seguridad.AssemblyInfo.cs
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\GestorStock.Seguridad.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\GestorStock.Seguridad.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\refint\GestorStock.Seguridad.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\GestorStock.Seguridad.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Seguridad\obj\Debug\net8.0\ref\GestorStock.Seguridad.dll

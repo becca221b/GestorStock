@@ -1,0 +1,11 @@
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\bin\Debug\net8.0\GestorStock.Entities.deps.json
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\bin\Debug\net8.0\GestorStock.Entities.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\bin\Debug\net8.0\GestorStock.Entities.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\GestorStock.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\GestorStock.Entities.AssemblyInfoInputs.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\GestorStock.Entities.AssemblyInfo.cs
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\GestorStock.Entities.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\GestorStock.Entities.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\refint\GestorStock.Entities.dll
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\GestorStock.Entities.pdb
+C:\Users\gabri\Documents\WPFPrueba - App WPF\WPFPrueba 2\GestorStock.Entities\obj\Debug\net8.0\ref\GestorStock.Entities.dll

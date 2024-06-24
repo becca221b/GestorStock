@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\ventanaproducto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\ventanaproducto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\ventanaproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\ventanaproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\ventanaagregarproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\ventanaagregarproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\ventanaeliminarproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\ventanaeliminarproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\ventanaactualizarproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\ventanaactualizarproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|c:\\users\\gabri\\documents\\wpfprueba - app wpf\\wpfprueba 2\\gestorstock\\view\\crearusuario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{93D00556-A866-4D6C-8DD8-053863375BB4}|GestorStock.csproj|solutionrelative:view\\crearusuario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VentanaProducto.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaProducto.xaml.cs",
+              "RelativeDocumentMoniker": "View\\VentanaProducto.xaml.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaProducto.xaml.cs",
+              "RelativeToolTip": "View\\VentanaProducto.xaml.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAYwFgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T00:03:46.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VentanaProducto.xaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaProducto.xaml",
+              "RelativeDocumentMoniker": "View\\VentanaProducto.xaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaProducto.xaml",
+              "RelativeToolTip": "View\\VentanaProducto.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-21T22:40:50.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VentanaEliminarProducto.xaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaEliminarProducto.xaml",
+              "RelativeDocumentMoniker": "View\\VentanaEliminarProducto.xaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaEliminarProducto.xaml",
+              "RelativeToolTip": "View\\VentanaEliminarProducto.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-21T22:40:26.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VentanaAgregarProducto.xaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaAgregarProducto.xaml",
+              "RelativeDocumentMoniker": "View\\VentanaAgregarProducto.xaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaAgregarProducto.xaml",
+              "RelativeToolTip": "View\\VentanaAgregarProducto.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-21T22:39:59.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VentanaActualizarProducto.xaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaActualizarProducto.xaml",
+              "RelativeDocumentMoniker": "View\\VentanaActualizarProducto.xaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\VentanaActualizarProducto.xaml",
+              "RelativeToolTip": "View\\VentanaActualizarProducto.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-21T22:39:39.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CrearUsuario.xaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\CrearUsuario.xaml",
+              "RelativeDocumentMoniker": "View\\CrearUsuario.xaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\CrearUsuario.xaml",
+              "RelativeToolTip": "View\\CrearUsuario.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-21T22:38:30.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\LoginView.xaml",
+              "RelativeDocumentMoniker": "View\\LoginView.xaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\WPFPrueba - App WPF\\WPFPrueba 2\\GestorStock\\View\\LoginView.xaml",
+              "RelativeToolTip": "View\\LoginView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-20T22:21:32.039Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
