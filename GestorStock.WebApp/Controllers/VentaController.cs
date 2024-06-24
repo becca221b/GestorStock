@@ -15,7 +15,9 @@ namespace GestorStock.WebApp.Controllers
 
         private readonly VentaBusinnes _ventaBusinnes;
 
-        public VentaController(VentaBusinnes ventaBusinnes,
+        private readonly ProductoBusinnes _productoBusinnes;
+
+        public VentaController(VentaBusinnes ventaBusinnes, ProductoBusinnes productoBusinnes,
             ILogger<VentaController> logger)
         {
             _logger = logger;
@@ -23,6 +25,8 @@ namespace GestorStock.WebApp.Controllers
             //Para hacer Inyección de dependencias
 
             _ventaBusinnes = ventaBusinnes;
+
+            _productoBusinnes = productoBusinnes;
         }
         public IActionResult Index(string sortOrder, string buscar, string currentFilter, int? page)
         {
@@ -58,6 +62,7 @@ namespace GestorStock.WebApp.Controllers
                            Text = c.Nombre
                        }).ToList();
             ViewBag.Categorias = lst;
+            ViewBag.StockOk = "display:none";
 
             //var productos = _ventaBusinnes.GetProductsByCategoryId(categoryId);
 
@@ -68,17 +73,43 @@ namespace GestorStock.WebApp.Controllers
         [HttpPost]
         public IActionResult Cargar(Venta venta, string producto)
         {
+
+            var categorias = _ventaBusinnes.GetCategories();
+            var lst = (from c in categorias
+                       select new SelectListItem
+                       {
+                           Value = c.CategoriaId.ToString(),
+                           Text = c.Nombre
+                       }).ToList();
+            ViewBag.Categorias = lst;
+            
+
             venta.ProductoId = Int32.Parse(producto);
-            //ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
-            var response = _ventaBusinnes.Create(venta);
-           if (response)
-           {
-                return RedirectToAction("Index");
-           }
-           else
-           {
-                return View();
-           }
+            
+            var result = _productoBusinnes.RestarStock(venta.Cantidad, venta.ProductoId);
+
+            ViewBag.StockOk = "display:none";
+
+
+            if (result)
+            {//ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
+                var response = _ventaBusinnes.Create(venta);
+                if (response)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View();
+                }
+            }
+            else
+            {   
+                ViewBag.StockOk= "display:block;color:red";
+                return View(venta);
+            }
+            
+            
             
         }
 

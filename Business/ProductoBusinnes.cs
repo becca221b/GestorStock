@@ -21,5 +21,10 @@ namespace Business
         {
             return _productoRepository.SumarStock(cantidad, productoId);
         }
+
+        public bool RestarStock(int cantidad, int productoId)
+        {
+            return _productoRepository.RestarStock(cantidad, productoId);
+        }
     }
 }

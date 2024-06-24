@@ -5,6 +5,7 @@
 
 @{
     ViewData["Title"] = "Cargar";
+   
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -20,7 +21,7 @@
             </div>
             <div class="mb-3 form-group">
                 <label>Categoría</label>
-                @Html.DropDownList("Categoria", (List<SelectListItem>)ViewBag.Categorias, new { @class = "form-select", id = "categName" })
+                @Html.DropDownList("Categorias", (List<SelectListItem>)ViewBag.Categorias, new { @class = "form-select", id = "categName" })
             </div>
             <div class="mb-3 form-group">
                 <label>Producto</label>
@@ -34,6 +35,7 @@
             <div class="mb-3">
                 <label class="form-label">Cantidad</label>
                 <input asp-for="Cantidad" type="number" class="form-control" id="inputCantidad">
+                <p style=@ViewBag.StockOk>Error de Stock</p>
             </div>
             <div class="mb-3">
                 <label for="inputUsuario" class="form-label">Usuario</label>

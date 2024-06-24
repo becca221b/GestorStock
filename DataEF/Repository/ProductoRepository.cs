@@ -46,5 +46,37 @@ namespace DataEF.Repository
             }
             return result;
         }
+
+        public bool RestarStock(int cantidad, int productoId)
+        {
+            bool result;
+            try
+            {
+                using (var db = new GestionStockContext(_config))
+                {
+                    var producto = (from p in db.Producto
+                                    where p.ProductoId == productoId
+                                    select p).FirstOrDefault();
+
+                    if(producto.Stock>=cantidad) {
+                        producto.Stock = producto.Stock-cantidad;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    
+                    db.Attach(producto);
+                    db.Entry(producto).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    db.SaveChanges();
+                }
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
+            return result;
+        }
     }
 }
