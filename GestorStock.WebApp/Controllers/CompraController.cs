@@ -76,7 +76,16 @@ namespace GestorStock.WebApp.Controllers
             ModelState.Remove("CompraId");
             ModelState.Remove("ProductoId");
             compra.ProductoId = Int32.Parse(producto);
-            
+
+            var categorias = _compraBusinnes.GetCategories();
+            var lst = (from c in categorias
+                       select new SelectListItem
+                       {
+                           Value = c.CategoriaId.ToString(),
+                           Text = c.Nombre
+                       }).ToList();
+            ViewBag.Categorias = lst;
+
 
 
             if (ModelState.IsValid)
