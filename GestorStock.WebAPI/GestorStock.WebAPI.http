@@ -1,0 +1,6 @@
+@GestorStock.WebAPI_HostAddress = http://localhost:5062
+
+GET {{GestorStock.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

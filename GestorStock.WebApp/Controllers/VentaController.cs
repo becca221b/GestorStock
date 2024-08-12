@@ -86,12 +86,13 @@ namespace GestorStock.WebApp.Controllers
 
             venta.ProductoId = Int32.Parse(producto);
             
-            var result = _productoBusinnes.RestarStock(venta.Cantidad, venta.ProductoId);
+            //var result = _productoBusinnes.RestarStock(venta.Cantidad, venta.ProductoId);
 
             ViewBag.StockOk = "display:none";
 
 
-            if (result)
+            //if (result)
+            if(true)
             {//ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
                 var response = _ventaBusinnes.Create(venta);
                 if (response)
