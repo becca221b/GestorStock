@@ -24,6 +24,8 @@ builder.Services.AddScoped<VentaRepository>();
 builder.Services.AddScoped<VentaBusinnes>();
 builder.Services.AddScoped<ProductoBusinnes>();
 builder.Services.AddScoped<ProductoRepository>();
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<UsuarioBusinnes>();
 
 
 // Add services to the container.
