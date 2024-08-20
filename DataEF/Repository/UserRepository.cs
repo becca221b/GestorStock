@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Configuration;
+using Entities;
 using Security;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,15 @@ namespace DataEF.Repository
 {
     public class UserRepository
     {
+        private readonly Config _config;
         private readonly StockDbContext _context;
         public UserRepository(StockDbContext context)
         {
             _context = context;
+        }
+        public UserRepository(Config config)
+        {
+           _config = config;
         }
 
         public bool Register(string name, string password)

@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "..\Configu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorStock.WebAPI", "..\GestorStock.WebAPI\GestorStock.WebAPI.csproj", "{7183BDE2-1CC7-4F3F-9F09-DCE47D44EECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorStock.WinForm", "..\GestorStock.WinForm\GestorStock.WinForm.csproj", "{0D1648B0-F55B-4AE9-A061-6DA79386A1EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorStock.WinForm", "..\GestorStock.WinForm\GestorStock.WinForm.csproj", "{0D1648B0-F55B-4AE9-A061-6DA79386A1EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "..\Security\Security.csproj", "{2C0CA83C-62B8-4031-9589-6D846EB918C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "..\Security\Security.csproj", "{2C0CA83C-62B8-4031-9589-6D846EB918C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
