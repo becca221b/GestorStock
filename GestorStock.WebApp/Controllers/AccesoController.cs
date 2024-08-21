@@ -30,7 +30,12 @@ namespace GestorStock.WebApp.Controllers
         {
             if (password != confirm) {
                 ViewData["Mensaje"] = "Las contraseñas no coinciden";
-                return View();
+                var user = new Usuario
+                {
+                    Nombre = name
+                };
+                
+                return View(user);
             }
             if (ModelState.IsValid)
             {
