@@ -28,6 +28,7 @@ namespace GestorStock.WebApp.Controllers
         [HttpPost]
         public IActionResult Register(string name, string password, string confirm)
         {
+            
             if (password != confirm) {
                 ViewData["Mensaje"] = "Las contraseñas no coinciden";
                 var user = new Usuario
@@ -54,7 +55,7 @@ namespace GestorStock.WebApp.Controllers
             }
             else
             {
-                return View(name, password);
+                return View();
             }
         }
     }
