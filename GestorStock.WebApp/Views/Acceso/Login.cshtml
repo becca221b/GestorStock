@@ -1,5 +1,58 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Entities
+
+@model Usuario
+
 @{
+    ViewData["Title"] = "Login";
+
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml"; ;
 }
+
+
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Registrate</h3>
+                    <p>Completa tus datos.</p>
+                    <form class="requires-validation" novalidate asp-action="Login" asp-controller="Acceso" method="post">
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="name" placeholder="Full Name" id="name" required asp-for="Nombre">
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="password" name="password" id="password" placeholder="Password" required>
+                            <div class="valid-feedback">Password field is valid!</div>
+                            <div class="invalid-feedback">Password field cannot be blank!</div>
+                        </div>
+
+                        
+
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Acceder</button>
+                        </div>
+
+                        @if (ViewData["Mensaje"] != null)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @ViewData["Mensaje"]
+                            </div>
+                        }
+                        <div class="mt-5" id="text">
+                            ¿No tienes una cuenta?
+                            <a asp-controller="Acceso" asp-action="Register">Registrate</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

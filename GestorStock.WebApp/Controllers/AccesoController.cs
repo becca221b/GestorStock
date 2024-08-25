@@ -21,6 +21,36 @@ namespace GestorStock.WebApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Login(string name, string password)
+        {
+            var user = new Usuario
+            {
+                Nombre = name
+
+            };
+            if (ModelState.IsValid)
+            {
+
+                var response = _userBusinnes.Login(name, password);
+                if (response != null)
+                {
+
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ViewData["Mensaje"] = "Usuario o contraseña incorrecto/s";
+                    return View();
+                }
+
+            }
+            else
+            {
+                return View(user);
+            }
+        }
+
         public IActionResult Register() { 
             return View();
         }

@@ -58,15 +58,22 @@ namespace DataEF.Repository
 
         public Usuario Login(string username, string password)
         {
-            var usuario = _context.Usuario.SingleOrDefault(x => x.Nombre == username);
+            using (var db = new GestionStockContext(_config))
+            {
+                var usuario = db.Usuario.SingleOrDefault(x => x.Nombre == username);
 
-            if (usuario == null)
-                return null;
 
-            if (!SecurityHelper.VerificarPasswordHash(password, usuario.Hash, usuario.Salt))
-                return null;
+                if (usuario != null)
+                {
+                    if (!SecurityHelper.VerificarPasswordHash(password, usuario.Hash, usuario.Salt))
+                        usuario = null;
+                }
 
-            return usuario;
+                    
+
+                return usuario;
+            }
+           
         }
     }
 }
