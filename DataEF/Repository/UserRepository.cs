@@ -1,5 +1,6 @@
 ﻿using Configuration;
 using Entities;
+using Microsoft.Data.SqlClient;
 using Security;
 using System;
 using System.Collections.Generic;
@@ -11,15 +12,15 @@ namespace DataEF.Repository
 {
     public class UserRepository
     {
-        private readonly Config _config;
-        private readonly StockDbContext _context;
-        public UserRepository(StockDbContext context)
+        //private readonly Config _config;
+        
+        private readonly GestionStockContext _context;
+
+
+        public UserRepository(GestionStockContext context)
         {
+            //_config = config;
             _context = context;
-        }
-        public UserRepository(Config config)
-        {
-           _config = config;
         }
 
         public bool Register(string name, string password)
@@ -39,12 +40,11 @@ namespace DataEF.Repository
             bool result;
             try
             {
-                using (var db = new StockDbContext())
-                {
-                    db.Add(user);
 
-                    db.SaveChanges();
-                }
+                _context.Add(user);
+
+                _context.SaveChanges();
+                
                 result = true;
             }
             catch (Exception ex)
@@ -58,10 +58,8 @@ namespace DataEF.Repository
 
         public Usuario Login(string username, string password)
         {
-            using (var db = new GestionStockContext(_config))
-            {
-                var usuario = db.Usuario.SingleOrDefault(x => x.Nombre == username);
-
+            try {
+                var usuario = _context.Usuario.SingleOrDefault(x => x.Nombre == username);
 
                 if (usuario != null)
                 {
@@ -69,11 +67,14 @@ namespace DataEF.Repository
                         usuario = null;
                 }
 
-                    
-
                 return usuario;
             }
-           
+            catch (Exception ex) {
+                // Console.WriteLine($"General Error: {ex.Message}");
+                return null;
+            }
+            
+
         }
     }
 }

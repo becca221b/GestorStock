@@ -11,10 +11,8 @@ namespace DataEF
 {
     public class GestionStockContext : DbContext
     {
-        private readonly Config _config;
-        public GestionStockContext(Config config)
+        public GestionStockContext(DbContextOptions<GestionStockContext> options) : base(options)
         {
-            _config = config;
         }
 
         public DbSet<Usuario> Usuario { get; set; }
@@ -23,9 +21,6 @@ namespace DataEF
         public DbSet<Compra> Compra { get; set; }
         public DbSet<Venta> Venta { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_config.ConnectionString);
-        }
+        
     }
 }

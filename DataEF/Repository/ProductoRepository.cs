@@ -12,14 +12,16 @@ namespace DataEF.Repository
 {
     public class ProductoRepository
     {
-        private readonly Config _config;
-        private readonly StockDbContext _context;
+        //private readonly Config _config;
+        //private readonly StockDbContext _context;
+        /*
         public ProductoRepository(Config config)
         {
             _config = config;
-        }
-        
-        public ProductoRepository(StockDbContext context)
+        }*/
+        private readonly GestionStockContext _context;
+
+        public ProductoRepository(GestionStockContext context)
         {
             _context = context;
         }
@@ -109,7 +111,7 @@ namespace DataEF.Repository
             bool result;
             try
             {
-                using (var db = new StockDbContext())
+                using (var db = _context)
                 {
                     if (db.Producto.Any(p => p.Nombre == nombre))
                     {
@@ -132,7 +134,7 @@ namespace DataEF.Repository
 
         public List<Producto> GetProducts()
         {
-            using (var db = new StockDbContext())
+            using (var db = _context)
             {
                 var products = db.Producto.Select(X => X).ToList();
                 return products;
@@ -142,7 +144,7 @@ namespace DataEF.Repository
 
         public List<Categoria> GetCategories()
         {
-            using (var db = new StockDbContext())
+            using (var db = _context)
             {
                 var categorias = (from c in db.Categoria
                                   select c).ToList();
@@ -152,7 +154,7 @@ namespace DataEF.Repository
 
         public List<Producto> GetProductByName(string nombre)
         {
-            using (var db = new StockDbContext())
+            using (var db = _context)
             {
                 var products = from p in db.Producto
                                where p.Nombre.Contains(nombre)
@@ -163,18 +165,22 @@ namespace DataEF.Repository
 
         public List<Producto> GetProductByCategory(int categoryId)
         {
-            using (var db = new StockDbContext())
-            {
+            var db = _context;
+            try{
                 var products = from p in db.Producto
                                where p.CategoriaId == categoryId
                                select p;
                 return products.ToList();
             }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
 
         public List<Producto> GetProductsByCategAndName(string category, string prodName)
         {
-            using (var db = new StockDbContext())
+            using (var db = _context)
             {
                 var products = from p in db.Producto
                                where p.Nombre == category

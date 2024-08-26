@@ -12,19 +12,20 @@ namespace DataEF.Repository
 {
     public class VentaRepository
     {
-        private readonly Config _config;
-        public VentaRepository(Config config)
+        //private readonly Config _config;
+        private readonly GestionStockContext _context;
+        public VentaRepository(GestionStockContext context)
         {
-            _config = config;
+            _context = context;
         }
 
         public List<VentaDTO> GetAll(string sortOrder, string buscar)
         {
             
-            using (var db = new GestionStockContext(_config))
+            try
             {
-                var ventas = (from v in db.Venta
-                               join p in db.Producto on v.ProductoId equals p.ProductoId
+                var ventas = (from v in _context.Venta
+                               join p in _context.Producto on v.ProductoId equals p.ProductoId
                                select new VentaDTO
                                {
                                    //CompraId= c.CompraId,
@@ -61,6 +62,11 @@ namespace DataEF.Repository
                 return ventas.ToList();
 
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return new List<VentaDTO>();
+            }
 
         }
 
@@ -69,11 +75,10 @@ namespace DataEF.Repository
             bool result;
             try
             {
-                using (var db = new GestionStockContext(_config))
-                {
-                    db.Add(venta);
-                    db.SaveChanges();
-                }
+                
+                _context.Add(venta);
+                _context.SaveChanges();
+                
                 result = true;
             }
             catch (Exception ex)
@@ -85,24 +90,32 @@ namespace DataEF.Repository
 
         public List<Categoria> GetCategories()
         {
-            using (var db = new GestionStockContext(_config))
+            try
             {
-                var categorias = (from c in db.Categoria
+                var categorias = (from c in _context.Categoria
                                   select c).ToList();
                 return categorias;
+            }
+            catch (Exception ex) { 
+                Console.WriteLine(ex.ToString());
+                return new List<Categoria>();
             }
         }
 
         public List<Producto> GetProductsByCategoryId(int categoryId)
         {
-            using (var db = new GestionStockContext(_config))
+            try
             {
-                var productos = (from p in db.Producto
-                                 join c in db.Categoria on p.CategoriaId equals c.CategoriaId
+                var productos = (from p in _context.Producto
+                                 join c in _context.Categoria on p.CategoriaId equals c.CategoriaId
                                  where p.CategoriaId == categoryId
                                  select p).ToList();
 
                 return productos;
+            }
+            catch (Exception ex) { 
+                Console.WriteLine(ex.Message);
+                return new List<Producto>();
             }
         }
     }

@@ -1,23 +1,19 @@
 using Business;
 using Configuration;
+using DataEF;
 using DataEF.Repository;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Se obtiene la cadena de conexión de appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("StockConnectionString");
 
+
+
+builder.Services.AddDbContext<GestionStockContext>(options =>
+   options.UseSqlServer(connectionString));
 //Se añade al scope de todo el proyecto
-
- var config = new Config()
-{
-    ConnectionString = connectionString
-};
-
-builder.Services.AddScoped<Config>(p =>
-{
-    return config;
-});
 builder.Services.AddScoped<CompraRepository>();
 builder.Services.AddScoped<CompraBusinnes>();
 builder.Services.AddScoped<VentaRepository>();
