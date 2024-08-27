@@ -17,22 +17,13 @@ namespace Business
         {
             _productoRepository = productoRepository;
         }
-        /*
-        public bool SumarStock(int cantidad, int productoId)
-        {
-            return _productoRepository.SumarStock(cantidad, productoId);
-        }
-
-        public bool RestarStock(int cantidad, int productoId)
-        {
-            return _productoRepository.RestarStock(cantidad, productoId);
-        }
+        
 
         public int GetStock(int productoId)
         {
             return _productoRepository.GetStock(productoId);
         }
-        */
+        
         //A PARTIR DE ACÁ METODOS PARA EL WINFORM
         public List<Producto> GetProducts()
         {

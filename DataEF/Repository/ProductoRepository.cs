@@ -25,79 +25,26 @@ namespace DataEF.Repository
         {
             _context = context;
         }
-        /*
-        public bool SumarStock(int cantidad, int productoId)
-        {
-            bool result;
-            try
-            {
-                using (var db = new GestionStockContext(_config))
-                {
-                    
-                    
-                    var producto = (from p in db.Producto
-                                    where p.ProductoId == productoId
-                                    select p).FirstOrDefault();
-                    
-                    producto.Stock += cantidad;
-                    
-
-                    db.Attach(producto);
-                    db.Entry(producto).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    db.SaveChanges();
-                }
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                result = false;
-            }
-            return result;
-        }
-
-        public bool RestarStock(int cantidad, int productoId)
-        {
-            bool result;
-            try
-            {
-                using (var db = new GestionStockContext(_config))
-                {
-                    var producto = (from p in db.Producto
-                                    where p.ProductoId == productoId
-                                    select p).FirstOrDefault();
-
-                    if(producto.Stock>=cantidad) {
-                        producto.Stock = producto.Stock-cantidad;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                    
-                    db.Attach(producto);
-                    db.Entry(producto).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    db.SaveChanges();
-                }
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                result = false;
-            }
-            return result;
-        }
-
+        
+        
         public int GetStock(int productoId)
         {
-            using (var db = new GestionStockContext(_config))
+            try
             {
-                var stock = (from p in db.Producto
+                var compras = (from p in _context.Compra
                              where p.ProductoId == productoId
-                             select p.Stock).FirstOrDefault();
-                return stock;
+                             select p.Cantidad).Sum();
+
+                var ventas = (from p in _context.Venta
+                              where p.ProductoId == productoId
+                              select p.Cantidad).Sum();
+                
+                return compras-ventas;
+            }catch(Exception ex) {
+                return 0;
             }
         }
-        */
+        
         //DESDE ACÁ METODOS PARA EL WINFORM
         public bool AddProduct(string nombre, int categoriaId)
         {

@@ -86,13 +86,13 @@ namespace GestorStock.WebApp.Controllers
 
             venta.ProductoId = Int32.Parse(producto);
             
-            //var result = _productoBusinnes.RestarStock(venta.Cantidad, venta.ProductoId);
+            var result = _productoBusinnes.GetStock(venta.ProductoId);
 
             ViewBag.StockOk = "display:none";
 
 
-            //if (result)
-            if(true)
+            if (result>=venta.Cantidad && result>0)
+            
             {//ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
                 var response = _ventaBusinnes.Create(venta);
                 if (response)
@@ -107,6 +107,7 @@ namespace GestorStock.WebApp.Controllers
             else
             {   
                 ViewBag.StockOk= "display:block;color:red";
+                ViewData["Mensaje"] = "Error de stock";
                 return View(venta);
             }
             
