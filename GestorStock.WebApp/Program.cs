@@ -4,6 +4,8 @@ using DataEF;
 using DataEF.Repository;
 using Microsoft.EntityFrameworkCore;
 
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //Se obtiene la cadena de conexión de appsettings.json
@@ -13,6 +15,14 @@ var connectionString = builder.Configuration.GetConnectionString("StockConnectio
 
 builder.Services.AddDbContext<GestionStockContext>(options =>
    options.UseSqlServer(connectionString));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).
+    AddCookie(options =>
+    {
+        options.LoginPath = "/Acceso/Login";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    });
+
 //Se añade al scope de todo el proyecto
 builder.Services.AddScoped<CompraRepository>();
 builder.Services.AddScoped<CompraBusinnes>();
@@ -41,11 +51,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Acceso}/{action=Login}/{id?}");
 
 app.Run();

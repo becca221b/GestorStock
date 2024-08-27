@@ -2,6 +2,10 @@
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace GestorStock.WebApp.Controllers
 {
     public class AccesoController : Controller
@@ -35,6 +39,22 @@ namespace GestorStock.WebApp.Controllers
                 var response = _userBusinnes.Login(name, password);
                 if (response != null)
                 {
+                    List<Claim> claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.Name, response.Nombre)
+                    };
+
+                    ClaimsIdentity claimsIdentity= new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    AuthenticationProperties properties = new AuthenticationProperties()
+                    {
+                        AllowRefresh = true,
+                    };
+
+                    HttpContext.SignInAsync(
+                        CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity),
+                        properties
+                        );
 
                     return RedirectToAction("Index", "Home");
                 }
