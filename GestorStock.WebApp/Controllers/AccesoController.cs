@@ -22,6 +22,7 @@ namespace GestorStock.WebApp.Controllers
         }
         public IActionResult Login()
         {
+            if (User.Identity!.IsAuthenticated) return RedirectToAction("Index", "Home");
             return View();
         }
 
@@ -71,7 +72,8 @@ namespace GestorStock.WebApp.Controllers
             }
         }
 
-        public IActionResult Register() { 
+        public IActionResult Register() {
+            if (User.Identity!.IsAuthenticated) return RedirectToAction("Index", "Home");
             return View();
         }
 

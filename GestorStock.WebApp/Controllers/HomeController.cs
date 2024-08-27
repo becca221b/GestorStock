@@ -2,8 +2,13 @@ using GestorStock.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+
 namespace GestorStock.WebApp.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,9 +23,10 @@ namespace GestorStock.WebApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Logout()
         {
-            return View();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Acceso");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
