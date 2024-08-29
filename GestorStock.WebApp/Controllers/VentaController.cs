@@ -69,7 +69,7 @@ namespace GestorStock.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cargar(VentaDTO venta, string producto)
+        public IActionResult Cargar(Venta venta, string producto)
         {
             venta.ProductoId = Int32.Parse(producto);
             var categorias = _productoBusinnes.GetCategoriesByProdId(venta.ProductoId);

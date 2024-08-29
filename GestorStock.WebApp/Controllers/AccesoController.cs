@@ -42,7 +42,8 @@ namespace GestorStock.WebApp.Controllers
                 {
                     List<Claim> claims = new List<Claim>()
                     {
-                        new Claim(ClaimTypes.Name, response.Nombre)
+                        new Claim(ClaimTypes.Name, response.Nombre),
+                        new Claim(ClaimTypes.NameIdentifier, response.UsuarioId.ToString())
                     };
 
                     ClaimsIdentity claimsIdentity= new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

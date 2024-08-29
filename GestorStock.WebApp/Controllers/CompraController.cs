@@ -93,7 +93,7 @@ namespace GestorStock.WebApp.Controllers
                 var response = _compraBusinnes.Create(compra);
                 if (response)
                 {
-                    //_productoBusinnes.SumarStock(compra.Cantidad, compra.ProductoId);
+                   
                     return RedirectToAction("Index");
                 }
                 else

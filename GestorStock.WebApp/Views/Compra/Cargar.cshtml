@@ -1,5 +1,5 @@
 ﻿@using Entities
-
+@using System.Security.Claims;
 @model Compra
 
 
@@ -8,7 +8,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Cargar</h1>
+<h1>Cargar Compra</h1>
 <div class="card">
     <div class="card-header">
         Nueva Compra
@@ -36,8 +36,17 @@
                 <input asp-for="Cantidad" type="number" class="form-control" id="inputCantidad">
             </div>
             <div class="mb-3">
+                <input asp-for="UsuarioId" type="hidden" class="form-control" id="inputUsuario" value="@if (User.Identity!.IsAuthenticated)
+                            {
+                                @User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).Select(c => c.Value).SingleOrDefault()
+                            }" readonly>
+            </div>
+            <div class="mb-3">
                 <label for="inputUsuario" class="form-label">Usuario</label>
-                <input asp-for="UsuarioId" type="text" class="form-control" id="inputUsuario">
+                <input  type="text" class="form-control" id="inputUsuario" value="@if (User.Identity!.IsAuthenticated)
+                            {
+                                @User.Claims.Where(c => c.Type == ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()
+                            }" readonly>
             </div>
             <div class="mb-3">
                 <label for="inputDate" class="form-label">Fecha de Compra</label>
