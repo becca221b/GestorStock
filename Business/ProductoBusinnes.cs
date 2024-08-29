@@ -23,7 +23,12 @@ namespace Business
         {
             return _productoRepository.GetStock(productoId);
         }
-        
+
+        public List<Categoria> GetCategoriesByProdId(int prodId)
+        {
+            return _productoRepository.GetCategoriesByProdId(prodId);
+        }
+
         //A PARTIR DE ACÁ METODOS PARA EL WINFORM
         public List<Producto> GetProducts()
         {

@@ -44,7 +44,27 @@ namespace DataEF.Repository
                 return 0;
             }
         }
-        
+
+        public List<Categoria> GetCategoriesByProdId(int prodId)
+        {
+            try
+            {
+                var categoriaId = (from p in _context.Producto
+                                  where p.ProductoId == prodId 
+                                  select p.CategoriaId).First();
+                var categoria = (from p in _context.Categoria
+                                 where p.CategoriaId == categoriaId
+                                 select p).ToList();
+
+                return categoria;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return new List<Categoria>();
+            }
+        }
+
         //DESDE ACÁ METODOS PARA EL WINFORM
         public bool AddProduct(string nombre, int categoriaId)
         {

@@ -70,13 +70,26 @@ namespace DataEF.Repository
 
         }
 
-        public bool Create(Venta venta)
+        public bool Create(VentaDTO venta)
         {
             bool result;
+           
             try
             {
+                var userId = (from u in _context.Usuario
+                          where u.Nombre == venta.Usuario
+                          select u.UsuarioId).First();
                 
-                _context.Add(venta);
+                var ventaPosta = new Venta
+                {
+                    ProductoId = venta.ProductoId,
+                    Cantidad = venta.Cantidad,
+                    UsuarioId = userId,
+                    FechaVenta = venta.FechaVenta
+                    
+                };
+
+                _context.Add(ventaPosta);
                 _context.SaveChanges();
                 
                 result = true;

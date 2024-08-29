@@ -22,7 +22,7 @@ namespace Business
             return _ventaRepository.GetAll(sortOrder, buscar);
         }
 
-        public bool Create(Venta venta)
+        public bool Create(VentaDTO venta)
         {
             return _ventaRepository.Create(venta);
         }

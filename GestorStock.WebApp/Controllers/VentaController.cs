@@ -1,5 +1,6 @@
 ﻿using Business;
 using Entities;
+using Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
@@ -52,7 +53,7 @@ namespace GestorStock.WebApp.Controllers
             return View(ventas.ToPagedList(pageNumber, pageSize));
         }
 
-        public IActionResult Cargar(int categoryId)
+        public IActionResult Cargar()
         {
             var categorias = _ventaBusinnes.GetCategories();
             var lst = (from c in categorias
@@ -63,29 +64,24 @@ namespace GestorStock.WebApp.Controllers
                        }).ToList();
             ViewBag.Categorias = lst;
             ViewBag.StockOk = "display:none";
-
-            //var productos = _ventaBusinnes.GetProductsByCategoryId(categoryId);
-
-            //EESTE METODO SOLO DEVUELVE LA VISTA
+            //ESTE METODO SOLO DEVUELVE LA VISTA
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cargar(Venta venta, string producto)
+        public IActionResult Cargar(VentaDTO venta, string producto)
         {
-
-            var categorias = _ventaBusinnes.GetCategories();
+            venta.ProductoId = Int32.Parse(producto);
+            var categorias = _productoBusinnes.GetCategoriesByProdId(venta.ProductoId);
             var lst = (from c in categorias
                        select new SelectListItem
                        {
                            Value = c.CategoriaId.ToString(),
                            Text = c.Nombre
                        }).ToList();
-            ViewBag.Categorias = lst;
-            
 
-            venta.ProductoId = Int32.Parse(producto);
-            
+            ViewBag.Categorias = lst;
+
             var result = _productoBusinnes.GetStock(venta.ProductoId);
 
             ViewBag.StockOk = "display:none";
@@ -108,6 +104,7 @@ namespace GestorStock.WebApp.Controllers
             {   
                 ViewBag.StockOk= "display:block;color:red";
                 ViewData["Mensaje"] = "Error de stock";
+                ViewBag.Alert = "Lo sentimos, no hay Stock. VUELVE A SELECCIONAR EL PRODUCTO";
                 return View(venta);
             }
             
