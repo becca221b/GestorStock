@@ -29,6 +29,11 @@ namespace Business
             return _productoRepository.GetCategoriesByProdId(prodId);
         }
 
+        public bool SetHabilitado(int productoId)
+        {
+            return _productoRepository.SetHabilitado(productoId);
+        }
+
         //A PARTIR DE ACÁ METODOS PARA EL WINFORM
         public List<Producto> GetProducts()
         {

@@ -12,13 +12,7 @@ namespace DataEF.Repository
 {
     public class ProductoRepository
     {
-        //private readonly Config _config;
-        //private readonly StockDbContext _context;
-        /*
-        public ProductoRepository(Config config)
-        {
-            _config = config;
-        }*/
+        
         private readonly GestionStockContext _context;
 
         public ProductoRepository(GestionStockContext context)
@@ -63,6 +57,32 @@ namespace DataEF.Repository
                 Console.WriteLine(ex.ToString());
                 return new List<Categoria>();
             }
+        }
+
+        public bool SetHabilitado(int productId)
+        {
+            bool result;
+            try
+            {
+                var producto = (from p in _context.Producto
+                                where p.ProductoId == productId
+                                select p).FirstOrDefault();
+                if (producto is not null)
+                {
+                    _context.Producto.Attach(producto);
+                    producto.Habilitado = !producto.Habilitado;
+                    _context.SaveChanges();
+                }
+                   
+               result = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                result= false;
+            }
+            return result;
+           
         }
 
         //DESDE ACÁ METODOS PARA EL WINFORM

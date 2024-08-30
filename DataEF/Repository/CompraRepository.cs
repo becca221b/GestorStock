@@ -74,10 +74,9 @@ namespace DataEF.Repository
         {
             bool result;
             try
-            {
-               
-                    _context.Add(compra);
-                    _context.SaveChanges();
+            {              
+                _context.Add(compra);
+                _context.SaveChanges();
                 
                 result = true;
             }

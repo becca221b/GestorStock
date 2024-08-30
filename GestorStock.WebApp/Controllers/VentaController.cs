@@ -89,10 +89,16 @@ namespace GestorStock.WebApp.Controllers
 
             if (result>=venta.Cantidad && result>0)
             
-            {//ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
-                var response = _ventaBusinnes.Create(venta);
+            {
+                var response = _ventaBusinnes.Create(venta);//ESTE METODO RECIBE EL OBJETO PARA GUARDARLO EN LA DB
+                
                 if (response)
-                {
+                {   
+                    if(result==venta.Cantidad)
+                    {
+                        _productoBusinnes.SetHabilitado(venta.ProductoId);
+                    }
+                    
                     return RedirectToAction("Index");
                 }
                 else

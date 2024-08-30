@@ -91,9 +91,9 @@ namespace GestorStock.WebApp.Controllers
             if (ModelState.IsValid)
             {
                 var response = _compraBusinnes.Create(compra);
-                if (response)
+                var respHabilitado = _productoBusinnes.SetHabilitado(compra.ProductoId);
+                if (response && respHabilitado)
                 {
-                   
                     return RedirectToAction("Index");
                 }
                 else
