@@ -47,7 +47,7 @@ namespace GestorStock.WebApp.Controllers
 
             var compras = _compraBusinnes.GetAll(sortOrder, buscar);
 
-            int pageSize = 3;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
             return View(compras.ToPagedList(pageNumber, pageSize));
         }

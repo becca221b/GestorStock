@@ -20,3 +20,55 @@ html {
 body {
   margin-bottom: 60px;
 }
+/* Estilos generales para el paginador */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+    /* Estilos para los elementos del paginador */
+    .pagination li {
+        margin: 0 0.25rem;
+    }
+
+    /* Estilos para los enlaces del paginador */
+    .pagination a {
+        display: block;
+        padding: 0.5rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        color: #007bff;
+        font-size: 0.875rem; /* Tamaño de fuente para dispositivos móviles */
+    }
+
+    /* Estilo para el enlace activo */
+    .pagination .active a {
+        background-color: #007bff;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        border-color: #007bff;
+    }
+
+    /* Estilo para el enlace en hover */
+    .pagination a:hover {
+        background-color: #f8f9fa;
+        border-color: #007bff;
+    }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    
+ 
+    .pagination a {
+        padding: 0.5rem;
+        font-size: 0.75rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }        
+}
+
+
+
+
